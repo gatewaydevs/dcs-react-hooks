@@ -8,12 +8,11 @@ import { useRepoApi } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-    const repositoryClient = useRepoApi();
+    const repositoryClient = useRepoApi({basePath: "https://qa.door43.org/api/v1/"});
     const [repository, setRepository] = useState({});
-    useEffect(() => {
-      setRepo(repositoryClient.repoGet('Es-419_gl', 'es-419_tn').then(({ data }) => data));
+    useEffect(async () => {
+      setRepository(await repositoryClient.repoGet('Es-419_gl', 'es-419_tn').then(({ data }) => data))
     },[])
-
     return (
       <>
         <ReactJson

@@ -1,8 +1,5 @@
-
-
-export const useApiConfig = ({ token, basePath, ...config }) => token && ({
-  apiKey: ((key) => key === "Authorization" && `token ${token}`),
+export const useApiConfig = ({ token, basePath, ...config }) => ({
+  apiKey: token && ((key) => key === "Authorization" && `token ${token}`),
   basePath: basePath.replace(/\/+$/, ""),
   ...config
 })
-

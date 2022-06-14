@@ -1,4 +1,4 @@
-import useApiConfig from "./useApiConfig";
+import { useApiConfig } from "./useApiConfig";
 
 /**
  * Uses DCS issues API.

@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/gatewaydevs/styleguidist-template">
+  <a href="https://github.com/gatewaydevs/dcs-react-hooks">
     <img src="public/logo500.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,14 +34,14 @@
   <p align="center">
     @Description
     <br />
-    <a href="https://styleguidist-template.netlify.app"><strong>Explore the docs and code playground »</strong></a>
+    <a href="https://dcs-react-hooks.netlify.app"><strong>Explore the docs and code playground »</strong></a>
     <br />
     <br />
-    <a href="https://styleguidist-template.netlify.app">View Demo</a>
+    <a href="https://dcs-react-hooks.netlify.app">View Demo</a>
     ·
-    <a href="https://github.com/gatewaydevs/styleguidist-template/issues">Report Bug</a>
+    <a href="https://github.com/gatewaydevs/dcs-react-hooks/issues">Report Bug</a>
     ·
-    <a href="https://github.com/gatewaydevs/styleguidist-template/issues">Request Feature</a>
+    <a href="https://github.com/gatewaydevs/dcs-react-hooks/issues">Request Feature</a>
   </p>
 </div>
 
@@ -77,16 +77,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://styleguidist-template.netlify.app/)
+[![Product Name Screen Shot][product-screenshot]](https://dcs-react-hooks.netlify.app/)
 
 **Purpose:**
-@styleguidist-template-purpose
+@dcs-react-hooks-purpose
 
 **Problem:**
-@styleguidist-template-problem
+@dcs-react-hooks-problem
 
 **Scope:**
-@styleguidist-template-scope
+@dcs-react-hooks-scope
 
 **Architecture and Design Principles:**
 See ARCHITECTURE.md for details on architecture and design principles for this project.
@@ -124,16 +124,16 @@ This is an example of how to list things you need to use the software and how to
 
 1. Setup a React app using `Create React App` or `React Styleguidist`.
   ```sh
-  npx create-react-app styleguidist-template-app
+  npx create-react-app dcs-react-hooks-app
   ```
 2. Add it to your React app or component library (inside your project path):
   * yarn
   ```sh
-  yarn add styleguidist-template
+  yarn add dcs-react-hooks
   ```
   * npm
   ```sh
-  npm i styleguidist-template
+  npm i dcs-react-hooks
   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -144,7 +144,7 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Styleguidist](https://styleguidist-template.netlify.app/#usepermalinks)._
+_For more examples, please refer to the [Styleguidist](https://dcs-react-hooks.netlify.app/#usepermalinks)._
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -152,10 +152,10 @@ _For more examples, please refer to the [Styleguidist](https://styleguidist-temp
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] [Return `data` fetched using url params](https://github.com/gatewaydevs/styleguidist-template/issues/16)
-- [ ] [Change path dynamically depending on app state](https://github.com/gatewaydevs/styleguidist-template/issues/4)
+- [ ] [Return `data` fetched using url params](https://github.com/gatewaydevs/dcs-react-hooks/issues/16)
+- [ ] [Change path dynamically depending on app state](https://github.com/gatewaydevs/dcs-react-hooks/issues/4)
 
-See the [open issues](https://github.com/gatewaydevs/styleguidist-template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/gatewaydevs/dcs-react-hooks/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -190,9 +190,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-@styleguidist-template-contact
+@dcs-react-hooks-contact
 
-Project Link: [https://github.com/gatewaydevs/styleguidist-template](https://github.com/gatewaydevs/styleguidist-template)
+Project Link: [https://github.com/gatewaydevs/dcs-react-hooks](https://github.com/gatewaydevs/dcs-react-hooks)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -210,14 +210,14 @@ Project Link: [https://github.com/gatewaydevs/styleguidist-template](https://git
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/gatewaydevs/styleguidist-template.svg?style=flat
-[contributors-url]: https://github.com/gatewaydevs/styleguidist-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gatewaydevs/styleguidist-template.svg?style=flat
-[forks-url]: https://github.com/gatewaydevs/styleguidist-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/gatewaydevs/styleguidist-template.svg?style=flat
-[stars-url]: https://github.com/gatewaydevs/styleguidist-template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/gatewaydevs/styleguidist-template.svg?style=flat
-[issues-url]: https://github.com/gatewaydevs/styleguidist-template/issues
-[license-shield]: https://img.shields.io/github/license/gatewaydevs/styleguidist-template.svg?style=flat
-[license-url]: https://github.com/gatewaydevs/styleguidist-template/blob/master/LICENSE
-[product-screenshot]: https://github.com/gatewaydevs/styleguidist-template/raw/master/public/screen-shot.png
+[contributors-shield]: https://img.shields.io/github/contributors/gatewaydevs/dcs-react-hooks.svg?style=flat
+[contributors-url]: https://github.com/gatewaydevs/dcs-react-hooks/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/gatewaydevs/dcs-react-hooks.svg?style=flat
+[forks-url]: https://github.com/gatewaydevs/dcs-react-hooks/network/members
+[stars-shield]: https://img.shields.io/github/stars/gatewaydevs/dcs-react-hooks.svg?style=flat
+[stars-url]: https://github.com/gatewaydevs/dcs-react-hooks/stargazers
+[issues-shield]: https://img.shields.io/github/issues/gatewaydevs/dcs-react-hooks.svg?style=flat
+[issues-url]: https://github.com/gatewaydevs/dcs-react-hooks/issues
+[license-shield]: https://img.shields.io/github/license/gatewaydevs/dcs-react-hooks.svg?style=flat
+[license-url]: https://github.com/gatewaydevs/dcs-react-hooks/blob/master/LICENSE
+[product-screenshot]: https://github.com/gatewaydevs/dcs-react-hooks/raw/master/public/screen-shot.png

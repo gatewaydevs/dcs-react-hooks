@@ -16,10 +16,10 @@ module.exports = {
   usageMode: 'expand',
   exampleMode: 'expand',
   components: 'src/documentation/**/*.{js,jsx,ts,tsx}',
-  moduleAliases: { 'styleguidist-template': path.resolve(__dirname, 'src') },
+  moduleAliases: { 'dcs-react-hooks': path.resolve(__dirname, 'src') },
   getComponentPathLine: componentPath => {
     const name = path.basename(componentPath, '.js');
-    return `import { ${name.split('.')[0]} } from 'styleguidist-template';`;
+    return `import { ${name.split('.')[0]} } from 'dcs-react-hooks';`;
   },
   handlers: componentPath => (
     require('react-docgen').defaultHandlers.concat(

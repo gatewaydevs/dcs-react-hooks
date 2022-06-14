@@ -1,6 +1,6 @@
 # Architecture
 
-The architecture of `styleguidist-template` is broken down into three primary layers but all provided through React Custom Hooks.
+The architecture of `dcs-react-hooks` is broken down into three primary layers but all provided through React Custom Hooks.
 
 - Design Principles
   - Do one thing well
@@ -46,7 +46,7 @@ Documentation includes .MD documented examples and wrapper JSX files to enable S
 
 ## Provided Hooks
 
-@styleguidist-template-hooks
+@dcs-react-hooks-hooks
 - `useHook1`
 - `useHook2`
 - `useHook3`

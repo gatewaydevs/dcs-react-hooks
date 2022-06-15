@@ -52,9 +52,9 @@ function Component(){
 
   return (
     <>
-      <label for="username">Username:</label>
+      <label htmlFor="username">Username:</label>
       <input type="text" name="username" onBlur={(e) => setUsername(e.target.value)}/>
-      <label for="password">Password:</label>
+      <label htmlFor="password">Password:</label>
       <input type="password" name="password" onBlur={(e) => setPassword(e.target.value)}/>
       <hr/>
       <ReactJson

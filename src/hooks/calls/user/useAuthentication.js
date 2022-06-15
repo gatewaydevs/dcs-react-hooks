@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import useSWR from "swr";
 import { useUserApi } from "../../api/useUserApi";
 
@@ -17,9 +16,9 @@ export function useAuthentication({tokenName, username, password, userClient, op
     console.log({allTokens});
 
     if (appTokens?.length > 0) {
-      appTokens.forEach(() => {
+      appTokens.forEach((token) => {
         _userClient
-          .userDeleteAccessToken(username, tokenName)
+          .userDeleteAccessToken(username, token.id)
           .then(({ data }) => data);
       });
     }
@@ -54,12 +53,7 @@ export function useAuthentication({tokenName, username, password, userClient, op
     options
   );
   
-  useEffect(() => {
-    if (!token && !password) {
-      setAuth(null);
-      setUser(null);
-    }
-  }, [password, setAuth, setUser, token]);
+
 
   return {
     state: {

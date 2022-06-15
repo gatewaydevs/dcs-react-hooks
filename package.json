@@ -24,6 +24,7 @@
     "swr": "^1.3.0"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "dcs-js": "^1.2.0-beta.1",
     "lorem-ipsum": "^2.0.4",
     "swr": "^1.3.0"

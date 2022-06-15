@@ -10,6 +10,7 @@ import { useApiConfig } from "./useApiConfig";
  * 
  */
 export const useUserApi = ({ username, password, basePath, ...config }) => {
+  console.log({config})
   const _config = useApiConfig({ username, password, basePath, ...config })
   const userClient = new UserApi(_config);
   return userClient;

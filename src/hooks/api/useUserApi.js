@@ -1,17 +1,30 @@
-import { UserApi } from "dcs-js";
-import { useApiConfig } from "./useApiConfig";
-
+import PropTypes from 'prop-types';
+import { UserApi } from 'dcs-js';
+import { AxiosInstance } from "axios";
+import { getApiConfig } from "../../helpers/api";
 /**
  * Uses DCS User API.
  * @param {Object} config - Object containing information required for Basic authorization
- * @param {string} config.username - The username
- * @param {string} config.password - The user password
- * @param {string} config.password - The user password
  * 
  */
-export const useUserApi = ({ username, password, basePath, ...config }) => {
-  console.log({config})
-  const _config = useApiConfig({ username, password, basePath, ...config })
-  const userClient = new UserApi(_config);
-  return userClient;
+export const useUserApi = ({ token, userClient, basePath, axios, ...configuration }) => {
+  if (userClient instanceof UserApi) return userClient;
+  const _configuration = getApiConfig({ token, ...configuration, basePath });
+  return new UserApi(_configuration, _configuration.basePath, axios);;
+};
+
+useUserApi.propTypes = {
+  token: PropTypes.string,
+  basePath: PropTypes.string,
+  userClient: PropTypes.instanceOf(UserApi),
+  axios: PropTypes.instanceOf(AxiosInstance),
+  /** *dcs-js* instance config */
+  configuration: PropTypes.shape({
+    apiKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.instanceOf(Promise)]),
+    username: PropTypes.string,
+    password: PropTypes.string,
+    accessToken: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.instanceOf(Promise)]),
+    basePath: PropTypes.string,
+    baseOptions: PropTypes.object,
+  })
 };

@@ -1,16 +1,25 @@
 import useSwr from 'swr';
-import useRepoApi from '../../api/useRepoApi';
+import { useRepoApi } from '../../api/useRepoApi';
 
-export function useRepository() {
+export function useRepository({ ownerName, repositoryName, options, config }) {
   
-  const repositoryClient = new useRepoApi({});
+  const repositoryClient = useRepoApi({...config});
 
-  const fetcher = () => {
-    const repository = repositoryClient.repoGet('Es-419_gl', 'es-419_tn').then(({ data }) => data);
+  const fetchRepo = () => {
+    const repository = repositoryClient.repoGet(ownerName, repositoryName).then(({ data }) => data);
     return repository;
   }
 
-  const { data, error } = useSwr('', fetcher);
+  const { data: repository, error, mutate: setRepository } = useSwr([ownerName,repositoryName], fetchRepo, options);
 
-  return {data, error}
-}
+  return {
+    state: {
+      repository,
+      error,
+      isLoading: !error && !repository && !!ownerName && !!repositoryName,
+    },
+    actions: {
+      setRepository,
+    }
+  }
+};

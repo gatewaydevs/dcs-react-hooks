@@ -1,12 +1,12 @@
 import useSwr from 'swr';
 import { useRepoApi } from '../../api/useRepoApi';
 
-export function useRepository({ ownerName, repositoryName, options, config }) {
+export function useRepository({ ownerName, repositoryName, repositoryClient, options, configuration, axios }) {
   
-  const repositoryClient = useRepoApi({...config});
+  const _repositoryClient = useRepoApi({repositoryClient, ...configuration, axios});
 
   const fetchRepo = () => {
-    const repository = repositoryClient.repoGet(ownerName, repositoryName).then(({ data }) => data);
+    const repository = _repositoryClient.repoGet(ownerName, repositoryName).then(({ data }) => data);
     return repository;
   }
 

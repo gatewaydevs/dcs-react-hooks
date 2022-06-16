@@ -14,14 +14,20 @@ function Component(){
   const tokenName = "dcs-react-hooks-playground"
 
   const {state,actions} = useAuthentication({tokenName, username, password});
-  console.log(state);
+  
+  const logout = () => {
+    actions.setAuth(null, false)
+    actions.setUser(null, false)
+  }
 
   return (
     <>
       <label htmlFor="username">Username:</label>
-      <input type="text" name="username" onBlur={(e) => setUsername(e.target.value)}/>
+      <input type="text" name="username" onBlur={(e) => setUsername(e.target.value)} />
       <label htmlFor="password">Password:</label>
-      <input type="password" name="password" onBlur={(e) => setPassword(e.target.value)}/>
+      <input type="password" name="password" onBlur={(e) => setPassword(e.target.value)} />
+      <button>Login</button>
+      <button onClick={logout}>Logout</button>
       <hr/>
       <ReactJson
         style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}

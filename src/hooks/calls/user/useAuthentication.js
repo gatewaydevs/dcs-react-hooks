@@ -63,7 +63,7 @@ export function useAuthentication({tokenName, username, password, userClient, op
     if (username && password && tokenName) {
       setAuth()
     }
-  },[username,password,tokenName,setUser,setAuth])
+  },[username,password,tokenName,setAuth])
 
   return {
     state: {

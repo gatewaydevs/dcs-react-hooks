@@ -22,6 +22,7 @@ export function useOrganization({ organizationName, organizationClient, options,
     },
     actions: {
       setOrganization,
+      getOrganizationClient: () => _organizationClient
     }
   }
 };

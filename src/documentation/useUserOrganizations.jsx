@@ -15,11 +15,11 @@ import PropTypes from 'prop-types';
  * @param {string} params.configuration.basePath
  * @param {Object} params.configuration.baseOptions
  */
-export function useUserOrganization() {
+export function useUserOrganizations() {
   return <></>;
 };
 
-useUserOrganization.propTypes = {
+useUserOrganizations.propTypes = {
   organizationName: PropTypes.string,
   username: PropTypes.string,
   /** see https://swr.vercel.app/docs/options#options */

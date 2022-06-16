@@ -22,7 +22,7 @@ export function useOrganization({ organizationName, organizationClient, options,
     },
     actions: {
       setOrganization,
-      getOrganizationClient: () => fetchOrg(),
+      getOrganizationClient: () => _organizationClient
     }
   }
 };

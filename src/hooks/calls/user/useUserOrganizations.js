@@ -19,13 +19,13 @@ export function useUserOrganizations({ username, organizationClient, options, co
   }
 
   const { data: orgList, error, mutate: setUserOrganizationsList }
-    = useSwr([username], fetchUserOrg, options);
+    = useSwr([username, token], fetchUserOrg, options);
 
   return {
     state: {
       orgList,
       error,
-      isLoading: !error && !orgList,
+      isLoading: !error && !orgList && (!!username || !!token),
     },
     actions: {
       setUserOrganizationsList,

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import useSWRImmutable from 'swr/immutable'
-import { useUserApi } from "../../api/useUserApi";
+import { useUserApi } from "../../clients/useUserApi";
 
 export function useAuthentication({tokenName, username, password, userClient, options, configuration, axios}) {
   const _userClient = useUserApi({ userClient, username, password, ...configuration, axios});

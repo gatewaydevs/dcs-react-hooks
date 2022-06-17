@@ -1,5 +1,5 @@
 import useSwr from 'swr';
-import { useRepoApi } from '../../api/useRepoApi';
+import { useRepoApi } from '../../clients/useRepoApi';
 
 export function useRepository({ ownerName, repositoryName, repositoryClient, options, configuration, axios }) {
   

@@ -1,5 +1,5 @@
 import useSwr from 'swr';
-import { useOrgApi } from '../../api/useOrgApi';
+import { useOrgApi } from '../../clients/useOrgApi';
 import { useAuthentication } from '../user/useAuthentication';
 
 export function useAllOrganizations({ organizationClient, options, configuration, axios }) {

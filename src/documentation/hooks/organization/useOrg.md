@@ -1,16 +1,16 @@
-# useOrganization
+# useOrg
 
 @hook-description
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useOrganization } from 'dcs-react-hooks';
+import { useOrg } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
   const [organizationName, setOrganizationName] = useState();
 
-  const { state, actions } = useOrganization({
+  const { state, actions } = useOrg({
     organizationName
   });
 

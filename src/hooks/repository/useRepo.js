@@ -1,7 +1,7 @@
 import useSwr from 'swr';
-import { useRepoClient } from '../../clients/useRepoClient';
+import { useRepoClient } from '@hooks/clients/useRepoClient';
 
-export function useRepository({ ownerName, repositoryName, repositoryClient, options, configuration, axios }) {
+export function useRepo({ ownerName, repositoryName, repositoryClient, options, configuration, axios }) {
   
   const _repositoryClient = useRepoClient({ repositoryClient, ...configuration, axios });
 

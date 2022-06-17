@@ -1,7 +1,7 @@
 import { OrganizationApi } from "dcs-js";
 import { AxiosInstance } from "axios";
 import PropTypes from 'prop-types';
-import { getApiConfig } from "../../helpers/api";
+import { getApiConfig } from "@helpers/api";
 
 /**
  * Uses DCS organization API.

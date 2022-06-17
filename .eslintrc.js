@@ -6,6 +6,13 @@ module.exports = {
     '@unfoldingword',
     'prettier',
   ],
+  settings: {
+    'import/resolver': {
+      'jsconfig': {
+        'config': 'jsconfig.json'
+      }
+    }
+  },
   'parserOptions': {
     'ecmaFeatures': { 'jsx': true },
     'ecmaVersion': 12,

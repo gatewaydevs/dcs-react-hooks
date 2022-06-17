@@ -1,4 +1,4 @@
-import { getApiConfig } from "../../helpers/api";
+import { getApiConfig } from "@helpers/api";
 
 /**
  * Uses DCS issues API.

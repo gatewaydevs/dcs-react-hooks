@@ -1,8 +1,8 @@
 import useSwr from 'swr';
-import { useOrgClient } from '../../clients/useOrgClient';
-import { useAuthentication } from '../user/useAuthentication';
+import { useOrgClient } from '@hooks/clients/useOrgClient';
+import { useAuthentication } from '@hooks/user/useAuthentication';
 
-export function useUserOrganizations({ username, organizationClient, options, configuration, axios }) {
+export function useUserOrgs({ username, organizationClient, options, configuration, axios }) {
   const { state: { token } } = useAuthentication({});
 
   const _organizationClient = useOrgClient({ organizationClient, token: token?.sha1, ...configuration, axios });

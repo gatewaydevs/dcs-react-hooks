@@ -32,6 +32,13 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    // extensions: ['js', 'jsx', 'ts', 'tsx'],
+    alias: {
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@helpers': path.resolve(__dirname, 'src/helpers'),
+    }
+  },
   node: {
     child_process: 'empty',
     fs: 'empty',

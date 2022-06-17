@@ -5,7 +5,7 @@ import { getApiConfig } from "../../helpers/api";
 
 /**
  * Uses DCS organization API.
- * @param {Object} params - useOrgApi parameters.
+ * @param {Object} params - useOrgClient parameters.
  * @param {string} params.token - Token needed to make secure requests.
  * @param {string} params.basePath - base route where the request will be sent.
  * @param {Object} params.organizationClient - OrganizationApi intance.
@@ -18,13 +18,13 @@ import { getApiConfig } from "../../helpers/api";
  * @param {string} configuration.basePath
  * @param {string} configuration.baseOptions
  */
-export const useOrgApi = ({ token, basePath, organizationClient, axios, configuration }) => {
+export const useOrgClient = ({ token, basePath, organizationClient, axios, configuration }) => {
   if (organizationClient instanceof OrganizationApi) return organizationClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
   return new OrganizationApi(_configuration, _configuration.basePath, axios);
 };
 
-useOrgApi.propTypes = {
+useOrgClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
   organizationClient: PropTypes.instanceOf(OrganizationApi),

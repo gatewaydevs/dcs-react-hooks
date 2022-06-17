@@ -1,12 +1,12 @@
-# useOrgApi
+# useOrgClient
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useOrgApi } from 'dcs-react-hooks';
+import { useOrgClient } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-    const orgClient = useOrgApi({ basePath: "https://qa.door43.org/api/v1/" });
+    const orgClient = useOrgClient({ basePath: "https://qa.door43.org/api/v1/" });
     console.log("orgClient:", orgClient)
     const [org, setOrg] = useState({});
     useEffect(async () => {

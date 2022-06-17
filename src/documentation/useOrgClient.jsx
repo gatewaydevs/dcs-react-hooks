@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RepositoryApi } from 'dcs-js';
+import { OrganizationApi } from 'dcs-js';
 import { AxiosInstance } from "axios";
-
 /**
- * Uses DCS Repository API.
+ * Uses DCS Organization API.
  * @param {Object} config - Token needed to make secure requests.
  * @param {string} config.token - Token needed to make secure requests.
  * @param {string} config.basePath - basePath to make the request
  */
-export function useRepoApi() {
+export function useOrgClient() {
   return <></>;
 };
 
-useRepoApi.propTypes = {
+useOrgClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  repositoryClient: PropTypes.instanceOf(RepositoryApi),
+  organizationClient: PropTypes.instanceOf(OrganizationApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

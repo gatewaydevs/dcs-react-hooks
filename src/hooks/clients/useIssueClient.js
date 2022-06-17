@@ -1,12 +1,12 @@
 import { IssueApi } from "dcs-js";
-import { useApiConfig } from "./useApiConfig";
+import { getApiConfig } from "../../helpers/api";
 
 /**
  * Uses DCS issue API.
  * @param {string} token - Token needed to make secure requests.
  */
-export const useIssuesApi = ({ token }) => {
-  const config = useApiConfig({ token });
+export const useIssuesClient = ({ token }) => {
+  const config = getApiConfig({ token });
   const issueClient = new IssueApi(config);
   return issueClient;
 };

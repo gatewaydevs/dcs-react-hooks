@@ -1,14 +1,14 @@
-# useRepoApi
+# useRepoClient
 
 @hook-description
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useRepoApi } from 'dcs-react-hooks';
+import { useRepoClient } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-    const repositoryClient = useRepoApi({ basePath: "https://qa.door43.org/api/v1/" });
+    const repositoryClient = useRepoClient({ basePath: "https://qa.door43.org/api/v1/" });
     
     console.log(repositoryClient);
     

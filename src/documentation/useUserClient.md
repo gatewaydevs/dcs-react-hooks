@@ -4,11 +4,11 @@
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useUserApi } from 'dcs-react-hooks';
+import { useUserClient } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-    const userClient = useUserApi({basePath: "https://qa.door43.org/api/v1/"});
+    const userClient = useUserClient({basePath: "https://qa.door43.org/api/v1/"});
     console.log(userClient);
 
     const [user, setUser] = useState({});
@@ -33,7 +33,7 @@ function Component(){
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useUserApi } from 'dcs-react-hooks';
+import { useUserClient } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
@@ -41,7 +41,7 @@ function Component(){
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  const userClient = useUserApi({basePath: "https://qa.door43.org/api/v1/", username, password});
+  const userClient = useUserClient({basePath: "https://qa.door43.org/api/v1/", username, password});
   console.log(userClient);
 
   useEffect(async () => {

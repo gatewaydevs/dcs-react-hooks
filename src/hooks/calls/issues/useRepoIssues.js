@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useSWR from "swr";
 
-import useIssuesApi from "../../api/useIssueApi";
+import useIssuesApi from "../../clients/useIssueClient";
 
 function useRepoIssues({
   resource,
@@ -9,7 +9,7 @@ function useRepoIssues({
   args = {},
   paged = false,
 }) {
-  const issuesClient = useIssuesApi({ token });
+  const issuesClient = useIssuesClient({ token });
   const [isLoading, setIsLoading] = useState(false);
 
   function fetcher(owner, repo, defaultPage) {

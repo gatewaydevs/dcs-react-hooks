@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { OrganizationApi } from 'dcs-js';
+import { UserApi } from 'dcs-js';
 import { AxiosInstance } from "axios";
 /**
- * Uses DCS Organization API.
- * @param {Object} config - Token needed to make secure requests.
- * @param {string} config.token - Token needed to make secure requests.
- * @param {string} config.basePath - basePath to make the request
+ * Uses DCS User API.
+ * @param {Object} config - Object containing information required for Basic authorization
+ * @param {string} config.username - The username
+ * @param {string} config.password - The user password
  */
-export function useOrgApi() {
+export function useUserClient() {
   return <></>;
 };
 
-useOrgApi.propTypes = {
+useUserClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  organizationClient: PropTypes.instanceOf(OrganizationApi),
+  userClient: PropTypes.instanceOf(UserApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

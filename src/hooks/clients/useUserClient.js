@@ -7,13 +7,13 @@ import { getApiConfig } from "../../helpers/api";
  * @param {Object} config - Object containing information required for Basic authorization
  * 
  */
-export const useUserApi = ({ token, userClient, basePath, axios, ...configuration }) => {
+export const useUserClient = ({ token, userClient, basePath, axios, ...configuration }) => {
   if (userClient instanceof UserApi) return userClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
   return new UserApi(_configuration, _configuration.basePath, axios);;
 };
 
-useUserApi.propTypes = {
+useUserClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
   userClient: PropTypes.instanceOf(UserApi),

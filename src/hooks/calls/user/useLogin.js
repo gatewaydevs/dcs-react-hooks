@@ -1,12 +1,12 @@
 import { useState } from "react";
 import useSWR from "swr";
 
-import { useUserApi } from "../../api/useUserApi";
+import { useUserApi } from "../../clients/useUserClient";
 
 export default function useLogin({tokenId}) {
   const [username, setUsername] = useState(undefined);
   const [password, setPassword] = useState(undefined);
-  const userClient = useUserApi({ username, password });
+  const userClient = useUserClient({ username, password });
 
   const fetchAuth = async (username) => {
     const allTokens = await userClient

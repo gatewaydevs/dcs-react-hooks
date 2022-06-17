@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import useSWRImmutable from 'swr/immutable'
-import { useUserApi } from "../../api/useUserApi";
+import { useUserClient } from "../../clients/useUserClient";
 
 export function useAuthentication({tokenName, username, password, userClient, options, configuration, axios}) {
-  const _userClient = useUserApi({ userClient, username, password, ...configuration, axios});
+  const _userClient = useUserClient({ userClient, username, password, ...configuration, axios});
 
   //Fetch function to get token and delete old ones
   const fetchAuth = async (username) => {

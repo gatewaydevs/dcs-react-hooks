@@ -1,4 +1,3 @@
-export * from "./useApiConfig"
 export * from "./useAdminClient"
 export * from "./useDcsClient"
 export * from "./useIssueClient"

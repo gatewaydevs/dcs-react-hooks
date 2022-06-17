@@ -1,12 +1,12 @@
 import { NotificationApi } from "dcs-js";
-import { useApiConfig } from "./useApiConfig";
+import { getApiConfig } from "../../helpers/api";
 
 /**
  * Uses DCS Notification API.
  * @param {string} token - Token needed to make secure requests.
  */
 export const useNotificationClient = ({ token }) => {
-  const config = useApiConfig({ token });
+  const config = getApiConfig({ token });
   const NotificationClient = new NotificationApi(config);
   return NotificationClient;
 };

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useSWR from "swr";
 
-import useIssuesApi from "../../clients/useIssueClient";
+import useIssuesApi from "@hooks/clients/useIssueClient";
 
 function useRepoIssues({
   resource,

@@ -1,10 +1,10 @@
-const path = require('path');
 const upperFirst = require('lodash/upperFirst');
 const camelCase = require('lodash/camelCase');
 
 const {
   name, version, repository,
 } = require('./package.json');
+const path = require('path');
 
 module.exports = {
   dangerouslyUpdateWebpackConfig(webpackConfig, env) {
@@ -16,7 +16,11 @@ module.exports = {
   usageMode: 'expand',
   exampleMode: 'expand',
   components: 'src/documentation/**/*.{js,jsx,ts,tsx}',
-  moduleAliases: { 'dcs-react-hooks': path.resolve(__dirname, 'src') },
+  moduleAliases: {
+    '@hooks': path.resolve(__dirname, 'src/hooks'),
+    '@helpers': path.resolve(__dirname, 'src/helpers'),
+    'dcs-react-hooks': path.resolve(__dirname, 'src'),
+  },
   getComponentPathLine: componentPath => {
     const name = path.basename(componentPath, '.js');
     return `import { ${name.split('.')[0]} } from 'dcs-react-hooks';`;

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { UserApi } from 'dcs-js';
 import { AxiosInstance } from "axios";
-import { getApiConfig } from "../../helpers/api";
+import { getApiConfig } from "@helpers/api";
 /**
  * Uses DCS User API.
  * @param {Object} config - Object containing information required for Basic authorization

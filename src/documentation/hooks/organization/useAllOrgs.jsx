@@ -14,11 +14,11 @@ import PropTypes from 'prop-types';
  * @param {string} params.configuration.basePath
  * @param {Object} params.configuration.baseOptions
  */
-export function useAllOrganizations() {
+export function useAllOrgs() {
   return <></>;
 };
 
-useAllOrganizations.propTypes = {
+useAllOrgs.propTypes = {
   /** see https://swr.vercel.app/docs/options#options */
   options: PropTypes.object,
   /** *dcs-js* instance config */

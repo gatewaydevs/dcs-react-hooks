@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { RepositoryApi } from 'dcs-js';
 import { AxiosInstance } from "axios";
-import { getApiConfig } from "../../helpers/api";
+import { getApiConfig } from "@helpers/api";
 
 /**
  * Uses DCS repository API.

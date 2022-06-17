@@ -1,5 +1,5 @@
 import { SettingsApi } from "dcs-js";
-import { getApiConfig } from "../../helpers/api";
+import { getApiConfig } from "@helpers/api";
 
 /**
  * Uses DCS Settings API.

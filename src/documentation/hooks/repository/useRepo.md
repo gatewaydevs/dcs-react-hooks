@@ -1,17 +1,17 @@
-# useRepository
+# useRepo
 
 @hook-description
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useRepository } from 'dcs-react-hooks';
+import { useRepo } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
   const [ownerName, setOwnerName] = useState();
   const [repositoryName, setRepositoryName] = useState();
 
-  const { state, actions } = useRepository({
+  const { state, actions } = useRepo({
     ownerName,
     repositoryName
   });

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
  * Get repository from DCS.
  * @param {Object} params - .
  * @param {string} params.ownerName - Owner name (user, organization).
+ * @param {string} params.repositoryName - Repository name
  * @param {Object} params.organizationClient - OrganizationApi intance.
  * @param {Object} params.axios - replace default axios instance.
  * @param {Object} params.configuration - OrganizationApi configuration parameters.
@@ -15,12 +16,13 @@ import PropTypes from 'prop-types';
  * @param {string} params.configuration.basePath
  * @param {Object} params.configuration.baseOptions
  */
-export function useOrganization() {
+export function useRepo() {
   return <></>;
 };
 
-useOrganization.propTypes = {
-  organizationName: PropTypes.string,
+useRepo.propTypes = {
+  ownerName: PropTypes.string,
+  repositoryName: PropTypes.string,
   /** see https://swr.vercel.app/docs/options#options */
   options: PropTypes.object,
   /** *dcs-js* instance config */

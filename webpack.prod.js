@@ -32,6 +32,12 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['js', 'jsx', 'ts', 'tsx'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    }
+  },
   node: {
     child_process: 'empty',
     fs: 'empty',

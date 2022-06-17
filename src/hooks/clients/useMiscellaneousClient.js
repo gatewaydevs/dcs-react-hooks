@@ -1,5 +1,5 @@
 import { MiscellaneousApi } from "dcs-js";
-import { getApiConfig } from "../../helpers/api";
+import { getApiConfig } from "@helpers/api";
 
 /**
  * Uses DCS Miscellaneous API.

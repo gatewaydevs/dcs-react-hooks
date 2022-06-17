@@ -1,11 +1,11 @@
 import useSwr from 'swr';
-import { useOrgApi } from '../../clients/useOrgApi';
+import { useOrgClient } from '../../clients/useOrgClient';
 import { useAuthentication } from '../user/useAuthentication';
 
 export function useAllOrganizations({ organizationClient, options, configuration, axios }) {
   const { state: { token } } = useAuthentication({});
-  
-  const _organizationClient = useOrgApi({organizationClient, token: token?.sha1, ...configuration, axios});
+
+  const _organizationClient = useOrgClient({organizationClient, token: token?.sha1, ...configuration, axios});
 
   const fetchOrgs = () => {
     const organizations = _organizationClient.orgGetAll().then(({ data }) => data);

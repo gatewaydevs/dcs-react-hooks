@@ -1,10 +1,10 @@
 import { useState } from "react";
 import useSWR from "swr";
 
-import useUserApi from "../../api/useUserApi";
+import useUserApi from "../../clients/useUserClient";
 
 export default function useUser({ username, password }) {
-  const userClient = useUserApi({ username, password });
+  const userClient = useUserClient({ username, password });
 
   const fetchUser = () => {
     const user = userClient.userGetCurrent().then(({ data }) => data);

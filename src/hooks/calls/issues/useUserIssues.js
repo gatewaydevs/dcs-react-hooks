@@ -2,13 +2,13 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import useSWR from "swr";
 
-import useIssuesApi from "../useIssuesApi";
+import useIssuesApi from "../useIssuesClient";
 
 function useUserIssues({
   token,
   args = {},
 }) {
-  const issuesClient = useIssuesApi({ token });
+  const issuesClient = useIssuesClient({ token });
   const { data, error, mutate } = useSWR(
     token && [token, "user/issues"],
     () => {

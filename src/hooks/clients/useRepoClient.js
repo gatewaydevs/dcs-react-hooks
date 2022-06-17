@@ -5,7 +5,7 @@ import { getApiConfig } from "../../helpers/api";
 
 /**
  * Uses DCS repository API.
- * @param {Object} params - useOrgApi parameters.
+ * @param {Object} params - useOrgClient parameters.
  * @param {string} params.token - Token needed to make secure requests.
  * @param {string} params.basePath - base route where the request will be sent.
  * @param {Object} params.repositoryClient - repositoryApi intance.
@@ -18,13 +18,13 @@ import { getApiConfig } from "../../helpers/api";
  * @param {string} configuration.basePath
  * @param {string} configuration.baseOptions
  */
-export const useRepoApi = ({ token, basePath, repositoryClient, axios, configuration } = {}) => {
+export const useRepoClient = ({ token, basePath, repositoryClient, axios, configuration } = {}) => {
   if (repositoryClient instanceof RepositoryApi) return repositoryClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
   return new RepositoryApi(_configuration, _configuration.basePath, axios);;
 };
 
-useRepoApi.propTypes = {
+useRepoClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
   repositoryClient: PropTypes.instanceOf(RepositoryApi),

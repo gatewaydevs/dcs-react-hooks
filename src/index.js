@@ -1,2 +1,2 @@
-export * from "./hooks/api"
+export * from "./hooks/clients"
 export * from "./hooks/calls"

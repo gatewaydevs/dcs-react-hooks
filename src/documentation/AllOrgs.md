@@ -8,17 +8,14 @@ Note that only the organization names are returned.
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useAuthentication, useOrganization } from 'dcs-react-hooks';
+import { useAuthentication, useOrgApi } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
   const { state: { token } } = useAuthentication({});
   const [ orgs, setOrgs] = useState([])
 
-  const { actions } = useOrganization({token});
-
-  const { getOrganizationClient } = actions;
-  const orgClient = getOrganizationClient();
+  const orgClient = useOrgApi({token});
 
 // now get all the orgnizations
   useEffect(async () => {

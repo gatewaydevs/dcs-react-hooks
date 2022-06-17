@@ -1,5 +1,6 @@
 const upperFirst = require('lodash/upperFirst');
 const camelCase = require('lodash/camelCase');
+const setSections =  require('./styleguide.sections');
 
 const {
   name, version, repository,
@@ -15,12 +16,12 @@ module.exports = {
   pagePerSection: true,
   usageMode: 'expand',
   exampleMode: 'expand',
-  components: 'src/documentation/**/*.{js,jsx,ts,tsx}',
   moduleAliases: {
     '@hooks': path.resolve(__dirname, 'src/hooks'),
     '@helpers': path.resolve(__dirname, 'src/helpers'),
     'dcs-react-hooks': path.resolve(__dirname, 'src'),
   },
+  sections: setSections(path.join(__dirname, 'src/documentation'), true),
   getComponentPathLine: componentPath => {
     const name = path.basename(componentPath, '.js');
     return `import { ${name.split('.')[0]} } from 'dcs-react-hooks';`;
@@ -36,4 +37,5 @@ module.exports = {
     url: repository.url,
     text: 'View on GitHub',
   },
+  tocMode: "collapse"
 };

@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/gatewaydevs/dcs-react-hooks">
+  <a href="https://github.com/unfoldingword/dcs-react-hooks">
     <img src="public/logo500.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -39,9 +39,9 @@
     <br />
     <a href="https://dcs-react-hooks.netlify.app">View Demo</a>
     ·
-    <a href="https://github.com/gatewaydevs/dcs-react-hooks/issues">Report Bug</a>
+    <a href="https://github.com/unfoldingword/dcs-react-hooks/issues">Report Bug</a>
     ·
-    <a href="https://github.com/gatewaydevs/dcs-react-hooks/issues">Request Feature</a>
+    <a href="https://github.com/unfoldingword/dcs-react-hooks/issues">Request Feature</a>
   </p>
 </div>
 
@@ -152,10 +152,10 @@ _For more examples, please refer to the [Styleguidist](https://dcs-react-hooks.n
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] [Return `data` fetched using url params](https://github.com/gatewaydevs/dcs-react-hooks/issues/16)
-- [ ] [Change path dynamically depending on app state](https://github.com/gatewaydevs/dcs-react-hooks/issues/4)
+- [ ] [Return `data` fetched using url params](https://github.com/unfoldingword/dcs-react-hooks/issues/16)
+- [ ] [Change path dynamically depending on app state](https://github.com/unfoldingword/dcs-react-hooks/issues/4)
 
-See the [open issues](https://github.com/gatewaydevs/dcs-react-hooks/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/unfoldingword/dcs-react-hooks/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -192,7 +192,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 @dcs-react-hooks-contact
 
-Project Link: [https://github.com/gatewaydevs/dcs-react-hooks](https://github.com/gatewaydevs/dcs-react-hooks)
+Project Link: [https://github.com/unfoldingword/dcs-react-hooks](https://github.com/unfoldingword/dcs-react-hooks)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -210,14 +210,14 @@ Project Link: [https://github.com/gatewaydevs/dcs-react-hooks](https://github.co
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/gatewaydevs/dcs-react-hooks.svg?style=flat
-[contributors-url]: https://github.com/gatewaydevs/dcs-react-hooks/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gatewaydevs/dcs-react-hooks.svg?style=flat
-[forks-url]: https://github.com/gatewaydevs/dcs-react-hooks/network/members
-[stars-shield]: https://img.shields.io/github/stars/gatewaydevs/dcs-react-hooks.svg?style=flat
-[stars-url]: https://github.com/gatewaydevs/dcs-react-hooks/stargazers
-[issues-shield]: https://img.shields.io/github/issues/gatewaydevs/dcs-react-hooks.svg?style=flat
-[issues-url]: https://github.com/gatewaydevs/dcs-react-hooks/issues
-[license-shield]: https://img.shields.io/github/license/gatewaydevs/dcs-react-hooks.svg?style=flat
-[license-url]: https://github.com/gatewaydevs/dcs-react-hooks/blob/master/LICENSE
-[product-screenshot]: https://github.com/gatewaydevs/dcs-react-hooks/raw/master/public/screen-shot.png
+[contributors-shield]: https://img.shields.io/github/contributors/unfoldingword/dcs-react-hooks.svg?style=flat
+[contributors-url]: https://github.com/unfoldingword/dcs-react-hooks/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/unfoldingword/dcs-react-hooks.svg?style=flat
+[forks-url]: https://github.com/unfoldingword/dcs-react-hooks/network/members
+[stars-shield]: https://img.shields.io/github/stars/unfoldingword/dcs-react-hooks.svg?style=flat
+[stars-url]: https://github.com/unfoldingword/dcs-react-hooks/stargazers
+[issues-shield]: https://img.shields.io/github/issues/unfoldingword/dcs-react-hooks.svg?style=flat
+[issues-url]: https://github.com/unfoldingword/dcs-react-hooks/issues
+[license-shield]: https://img.shields.io/github/license/unfoldingword/dcs-react-hooks.svg?style=flat
+[license-url]: https://github.com/unfoldingword/dcs-react-hooks/blob/master/LICENSE
+[product-screenshot]: https://github.com/unfoldingword/dcs-react-hooks/raw/master/public/screen-shot.png

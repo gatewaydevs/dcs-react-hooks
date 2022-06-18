@@ -1,4 +1,4 @@
-<!-- Clients -->
+<!-- title: Clients -->
 
 This document lists all client hooks from [dcs-react-hooks](/#)
 

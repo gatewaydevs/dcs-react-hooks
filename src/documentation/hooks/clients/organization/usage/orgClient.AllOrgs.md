@@ -1,8 +1,13 @@
 # All Organizations
 
-This demo shows how to access the "organization client" and use its
-methods. The possible clients and their class methods may be found
-in the `unfoldingWord/dcs-js` repository.
+This demo shows how to access "organization client" hook (`useOrgClient`) and use its
+method:
+
+```js static
+  orgClient.orgGetAll({args})
+```
+
+documented here: [dcs-js/classes/OrganizationApi/method/orgGetAll](https://github.com/unfoldingWord/dcs-js/blob/master/documentation/classes/OrganizationApi.md#orggetall)
 
 Note that only the organization names are returned.
 
@@ -47,3 +52,7 @@ function Component(){
 
 <Component />
 ```
+
+> The `OrganizationApi` instance returned by `useOrgClient` and its possible methods is documented at [unfoldingWord/dcs-js/documentation/classes/OrganizationApi](https://github.com/unfoldingWord/dcs-js/blob/master/documentation/classes/OrganizationApi.md).
+
+> Other clients and their class methods may be found in [`unfoldingWord/dcs-js/documentation/classes`](https://github.com/unfoldingWord/dcs-js/blob/master/documentation/modules.md#classes).

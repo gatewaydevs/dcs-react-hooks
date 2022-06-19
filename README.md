@@ -27,12 +27,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/unfoldingword/dcs-react-hooks">
-    <img src="public/logo500.png" alt="Logo" width="80" height="80">
+    <img src="https://socialify.git.ci/unfoldingWord/dcs-react-hooks/image?description=1&font=Raleway&forks=1&issues=1&language=1&logo=https%3A%2F%2Fgit.door43.org%2Fassets%2Fimg%2Flogo.svg&name=1&owner=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Light" alt="dcs-react-hooks" width="640" height="320" />
   </a>
-
-<h3 align="center">Styleguidist Template</h3>
   <p align="center">
-    @Description
+    A React Utility Components Library for RCL developers
     <br />
     <a href="https://dcs-react-hooks.netlify.app"><strong>Explore the docs and code playground »</strong></a>
     <br />
@@ -116,23 +114,23 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
-  ```sh
+  ```bash
   npm install npm@latest -g
   ```
 
 ### Installation/First Steps
 
 1. Setup a React app using `Create React App` or `React Styleguidist`.
-  ```sh
+  ```bash
   npx create-react-app dcs-react-hooks-app
   ```
 2. Add it to your React app or component library (inside your project path):
   * yarn
-  ```sh
+  ```bash
   yarn add dcs-react-hooks
   ```
   * npm
-  ```sh
+  ```bash
   npm i dcs-react-hooks
   ```
 

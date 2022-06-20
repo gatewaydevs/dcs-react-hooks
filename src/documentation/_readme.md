@@ -1,4 +1,4 @@
-<!-- title: Introduction, depht: 0 -->
+<!-- title: Introduction, depth: 0 -->
 
 <div id="top"></div>
 

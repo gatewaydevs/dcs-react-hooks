@@ -2,13 +2,13 @@ import useSwr from 'swr';
 import { useOrgClient } from '@hooks/clients/useOrgClient';
 import { useAuthentication } from '@hooks/user/useAuthentication';
 
-export function useAllOrgs({ organizationClient, options, configuration, axios }) {
+export function useAllOrgs({ orgClient, options, configuration, axios }) {
   const { state: { token } } = useAuthentication({});
 
-  const _organizationClient = useOrgClient({organizationClient, token: token?.sha1, ...configuration, axios});
+  const _orgClient = useOrgClient({orgClient, token: token?.sha1, ...configuration, axios});
 
   const fetchOrgs = () => {
-    const organizations = _organizationClient.orgGetAll().then(({ data }) => data);
+    const organizations = _orgClient.orgGetAll().then(({ data }) => data);
     return organizations;
   }
 
@@ -22,7 +22,7 @@ export function useAllOrgs({ organizationClient, options, configuration, axios }
     },
     actions: {
       setOrganization,
-      getOrganizationClient: () => _organizationClient
+      getorgClient: () => _orgClient
     }
   }
 };

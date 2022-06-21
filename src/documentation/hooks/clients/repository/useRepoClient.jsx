@@ -16,7 +16,7 @@ export function useRepoClient() {
 useRepoClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  repositoryClient: PropTypes.instanceOf(RepositoryApi),
+  repoClient: PropTypes.instanceOf(RepositoryApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

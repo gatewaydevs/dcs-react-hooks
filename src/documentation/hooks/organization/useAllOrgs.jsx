@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 /**
  * Get All organizations from DCS.
  * @param {Object} params - .
- * @param {Object} params.organizationClient - OrganizationApi intance.
+ * @param {Object} params.orgClient - OrganizationApi intance.
  * @param {Object} params.axios - replace default axios instance.
  * @param {Object} params.configuration - OrganizationApi configuration parameters.
  * @param {string} params.configuration.token

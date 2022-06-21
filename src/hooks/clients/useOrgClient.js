@@ -8,7 +8,7 @@ import { getApiConfig } from "@helpers/api";
  * @param {Object} params - useOrgClient parameters.
  * @param {string} params.token - Token needed to make secure requests.
  * @param {string} params.basePath - base route where the request will be sent.
- * @param {Object} params.organizationClient - OrganizationApi intance.
+ * @param {Object} params.orgClient - OrganizationApi intance.
  * @param {Object} axios - replace default axios instance.
  * @param {Object} configuration - OrganizationApi configuration parameters.
  * @param {(string|Promise|Callback)} configuration.apiKey
@@ -18,8 +18,8 @@ import { getApiConfig } from "@helpers/api";
  * @param {string} configuration.basePath
  * @param {string} configuration.baseOptions
  */
-export const useOrgClient = ({ token, basePath, organizationClient, axios, configuration }) => {
-  if (organizationClient instanceof OrganizationApi) return organizationClient;
+export const useOrgClient = ({ token, basePath, orgClient, axios, configuration }) => {
+  if (orgClient instanceof OrganizationApi) return orgClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
   return new OrganizationApi(_configuration, _configuration.basePath, axios);
 };
@@ -27,7 +27,7 @@ export const useOrgClient = ({ token, basePath, organizationClient, axios, confi
 useOrgClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  organizationClient: PropTypes.instanceOf(OrganizationApi),
+  orgClient: PropTypes.instanceOf(OrganizationApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

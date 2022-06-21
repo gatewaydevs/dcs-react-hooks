@@ -8,20 +8,20 @@ import { useOrg } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-  const [organizationName, setOrganizationName] = useState();
+  const [orgName, setOrgName] = useState();
 
   const { state, actions } = useOrg({
-    organizationName
+    orgName
   });
 
   const { organization, isLoading } = state;
 
   const unsetOrgParams = () => {
-    setOrganizationName(null);
+    setOrgName(null);
   }
 
   const setOrgParams = () => {
-    setOrganizationName("unfoldingword");
+    setOrgName("unfoldingword");
   }
 
   return isLoading ? "loading..." : (

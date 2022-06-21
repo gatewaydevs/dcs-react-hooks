@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
  * Get repository from DCS.
  * @param {Object} params - .
  * @param {string} params.ownerName - Owner name (user, organization).
- * @param {Object} params.organizationClient - OrganizationApi intance.
+ * @param {Object} params.orgClient - OrganizationApi intance.
  * @param {Object} params.axios - replace default axios instance.
  * @param {Object} params.configuration - OrganizationApi configuration parameters.
  * @param {string} params.configuration.token
@@ -20,7 +20,7 @@ export function useUserOrgs() {
 };
 
 useUserOrgs.propTypes = {
-  organizationName: PropTypes.string,
+  orgName: PropTypes.string,
   username: PropTypes.string,
   /** see https://swr.vercel.app/docs/options#options */
   options: PropTypes.object,

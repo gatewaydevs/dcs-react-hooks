@@ -8,7 +8,7 @@ import { getApiConfig } from "@helpers/api";
  * @param {Object} params - useOrgClient parameters.
  * @param {string} params.token - Token needed to make secure requests.
  * @param {string} params.basePath - base route where the request will be sent.
- * @param {Object} params.repositoryClient - repositoryApi intance.
+ * @param {Object} params.repoClient - repositoryApi intance.
  * @param {Object} axios - replace default axios instance.
  * @param {Object} configuration - repositoryApi configuration parameters.
  * @param {(string|Promise|Callback)} configuration.apiKey
@@ -18,8 +18,8 @@ import { getApiConfig } from "@helpers/api";
  * @param {string} configuration.basePath
  * @param {string} configuration.baseOptions
  */
-export const useRepoClient = ({ token, basePath, repositoryClient, axios, configuration } = {}) => {
-  if (repositoryClient instanceof RepositoryApi) return repositoryClient;
+export const useRepoClient = ({ token, basePath, repoClient, axios, configuration } = {}) => {
+  if (repoClient instanceof RepositoryApi) return repoClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
   return new RepositoryApi(_configuration, _configuration.basePath, axios);;
 };
@@ -27,7 +27,7 @@ export const useRepoClient = ({ token, basePath, repositoryClient, axios, config
 useRepoClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  repositoryClient: PropTypes.instanceOf(RepositoryApi),
+  repoClient: PropTypes.instanceOf(RepositoryApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

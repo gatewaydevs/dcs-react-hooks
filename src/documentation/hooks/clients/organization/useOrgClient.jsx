@@ -15,7 +15,7 @@ export function useOrgClient() {
 useOrgClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  organizationClient: PropTypes.instanceOf(OrganizationApi),
+  orgClient: PropTypes.instanceOf(OrganizationApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

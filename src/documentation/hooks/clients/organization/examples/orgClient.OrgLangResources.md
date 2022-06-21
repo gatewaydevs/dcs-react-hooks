@@ -94,3 +94,94 @@ function Component(){
 
 <Component />
 ```
+
+
+# Obtaining language information for Organization Languages
+
+This demo shows how to use the `uw-languages-rcl` to add language metadata
+to the language code from the organizations.
+
+```js
+import React, { useEffect, useState } from 'react';
+import { useAuthentication, useOrgClient } from 'dcs-react-hooks';
+import { useLanguages } from 'uw-languages-rcl';
+import ReactJson from 'react-json-view';
+
+function Component(){
+  const { state: { token } } = useAuthentication({});
+  const [ languages, setLanguages] = useState([]);
+  const [ langData, setLangData] = useState([]);
+  const scriptureResourceCodes = [
+    'ta',
+    'tw',
+    'tn',
+    'tq',
+    'sn',
+    'sq',
+    'twl',
+    'ult',
+    'glt',
+    'ust',
+    'gst',
+  ];
+  const obsResourceCodes = [
+    'obs',
+    'obs-tn',
+    'obs-tq',
+    'obs-sn',
+    'obs-sq',
+    'obs-twl',
+  ];
+
+  const { state: languageList , actions } = useLanguages();
+
+  const orgClient = useOrgClient({token});
+
+// now get all the orgnizations
+  useEffect(async () => {
+    const _repos = await orgClient.orgListRepos('unfoldingword').then(({ data }) => data);
+    let _langs = [];
+    const _repoNames = _repos.map( (repo) => {
+      const [lang,res] = repo.name.split('_');
+      if ( scriptureResourceCodes.includes(res) ) {
+        if ( ! _langs.includes(lang) ) {
+          _langs.push(lang);
+        }
+      } else if ( obsResourceCodes.includes(res) ) {
+        if ( ! _langs.includes(lang) ) {
+          _langs.push(lang);
+        }
+      }
+    });
+
+    setLanguages(_langs);
+  },[])
+
+  useEffect( async () => {
+    const languagePrettifier = () => {
+      let langinfo = [];
+      for (let i=0; i<languages.length; i++) {
+        const _langData = actions.formatLanguage(actions.getLanguage(languages[i]));
+        langinfo.push(_langData);
+      }
+      setLangData(langinfo);
+    }
+    if ( languages.length > 0 ) {
+      languagePrettifier()
+    }
+  },[languages, languageList])
+
+  return (
+    <>
+      <h1>Language Data for Organization</h1>
+      <ReactJson
+        style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
+        src={langData}
+        theme="monokai"
+      />
+    </>
+  );
+}
+
+<Component />
+```

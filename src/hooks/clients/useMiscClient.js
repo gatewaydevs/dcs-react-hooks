@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types';
-import { AdminApi } from "dcs-js";
+import { MiscellaneousApi } from "dcs-js";
 import { AxiosInstance } from "axios";
 import { getApiConfig } from "@helpers/api";
 
 /**
- * Uses AdminApi from dcs-js.
+ * Uses MiscellaneousApi from dcs-js.
  */
-export const useAdminClient = ({ token, basePath, adminClient, axios, configuration } = {}) => {
-  if (adminClient instanceof AdminApi) return adminClient;
+export const useMiscClient = ({ token, basePath, miscClient, axios, configuration } = {}) => {
+  if (miscClient instanceof MiscellaneousApi) return miscClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
-  return new AdminApi(_configuration, _configuration.basePath, axios);
+  return new MiscellaneousApi(_configuration, _configuration.basePath, axios);
 };
 
-useAdminClient.propTypes = {
+useMiscClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  adminClient: PropTypes.instanceOf(AdminApi),
+  miscClient: PropTypes.instanceOf(MiscellaneousApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

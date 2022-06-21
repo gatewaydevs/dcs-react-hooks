@@ -2,15 +2,14 @@ import PropTypes from 'prop-types';
 import { UserApi } from 'dcs-js';
 import { AxiosInstance } from "axios";
 import { getApiConfig } from "@helpers/api";
+
 /**
- * Uses DCS User API.
- * @param {Object} config - Object containing information required for Basic authorization
- * 
+ * Uses UserApi from DCS.
  */
-export const useUserClient = ({ token, userClient, basePath, axios, ...configuration }) => {
+export const useUserClient = ({ token, userClient, basePath, axios, configuration }) => {
   if (userClient instanceof UserApi) return userClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
-  return new UserApi(_configuration, _configuration.basePath, axios);;
+  return new UserApi(_configuration, _configuration.basePath, axios);
 };
 
 useUserClient.propTypes = {

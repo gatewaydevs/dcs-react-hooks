@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RepositoryApi } from 'dcs-js';
+import { OrganizationApi } from 'dcs-js';
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 
 /**
- * Get repository from DCS.
+ * Get user's organziations from DCS.
  */
-
-export function useRepo() {
+export function useUserOrgs() {
   return <></>;
 };
 
-useRepo.propTypes = {
-  ownerName: PropTypes.string,
-  repoName: PropTypes.string,
-  repoClient: PropTypes.instanceOf(RepositoryApi),
+useUserOrgs.propTypes = {
+  username: PropTypes.string,
+  page: PropTypes.number,
+  limit: PropTypes.number,
+  orgClient: PropTypes.instanceOf(OrganizationApi),
   options: PropTypes.shape({
     /** see https://swr.vercel.app/docs/options#options */
     swr: PropTypes.object,

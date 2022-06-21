@@ -8,21 +8,21 @@ export function useOrg({ orgName, orgClient, options, configuration, axios }) {
   const _orgClient = useOrgClient({orgClient, token: token?.sha1, ...configuration, axios});
 
   const fetchOrg = () => {
-    const organization = _orgClient.orgGet(orgName).then(({ data }) => data);
-    return organization;
+    const org = _orgClient.orgGet(orgName,options?.request).then(({ data }) => data);
+    return org;
   }
 
-  const { data: organization, error, mutate: setOrganization } = useSwr([orgName], fetchOrg, options);
+  const { data: org, error, mutate: setOrg } = useSwr([orgName], fetchOrg, options?.swr);
 
   return {
     state: {
-      organization,
+      org,
       error,
-      isLoading: !error && !organization && !!orgName,
+      isLoading: !error && !org && !!orgName,
     },
     actions: {
-      setOrganization,
-      getorgClient: () => _orgClient
+      setOrg,
+      getOrgClient: () => _orgClient
     }
   }
 };

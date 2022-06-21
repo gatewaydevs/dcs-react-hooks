@@ -2,23 +2,25 @@
 
 The following *JSON* is the result of the code found below.
 
-> **Tip:** Change the code to get different results.
+**Tips:**
+> Change the code to get different results.
+> > **First**: login using the `useAuthentication` demo
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useAllOrgs } from 'dcs-react-hooks';
+import { useUserOrgs } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-  const { state, actions } = useAllOrgs({lang: "es-419", page: 1, limit: 5});
+  const { state, actions } = useUserOrgs({ });
 
-  const { orgs, isLoading } = state;
+  const { orgList, isLoading } = state;
 
   return isLoading ? "loading..." : (
     <>
       <ReactJson
         style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
-        src={orgs}
+        src={orgList}
         theme="monokai"
       />
     </>

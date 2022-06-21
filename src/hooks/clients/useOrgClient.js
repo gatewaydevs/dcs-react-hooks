@@ -4,19 +4,7 @@ import PropTypes from 'prop-types';
 import { getApiConfig } from "@helpers/api";
 
 /**
- * Uses DCS organization API.
- * @param {Object} params - useOrgClient parameters.
- * @param {string} params.token - Token needed to make secure requests.
- * @param {string} params.basePath - base route where the request will be sent.
- * @param {Object} params.orgClient - OrganizationApi intance.
- * @param {Object} axios - replace default axios instance.
- * @param {Object} configuration - OrganizationApi configuration parameters.
- * @param {(string|Promise|Callback)} configuration.apiKey
- * @param {string} configuration.username
- * @param {string} configuration.password
- * @param {(string|Promise|Callback)} configuration.accessToken
- * @param {string} configuration.basePath
- * @param {string} configuration.baseOptions
+ * Uses OrganizationApi from dcs-js.
  */
 export const useOrgClient = ({ token, basePath, orgClient, axios, configuration }) => {
   if (orgClient instanceof OrganizationApi) return orgClient;

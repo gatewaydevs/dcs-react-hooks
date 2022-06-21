@@ -1,24 +1,24 @@
-# useUserOrgs
+### Example:
 
-**First**: login using the `useAuthentication` demo
+The following *JSON* is the result of the code found below.
 
-@hook-description
+> **Tip:** Change the code to get different results.
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useUserOrgs } from 'dcs-react-hooks';
+import { useOrgRepos } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-  const { state, actions } = useUserOrgs({ });
+  const { state, actions } = useOrgRepos({ orgName: "unfoldingWord", page: 1, limit: 2 });
 
-  const { orgList, isLoading } = state;
+  const { isLoading } = state;
 
   return isLoading ? "loading..." : (
     <>
       <ReactJson
         style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
-        src={orgList}
+        src={state}
         theme="monokai"
       />
     </>

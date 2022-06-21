@@ -6,24 +6,24 @@ The following *JSON* is the result of the code found below.
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useRepoClient } from 'dcs-react-hooks';
+import { useNotifClient } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
-    const repoClient = useRepoClient({ basePath: "https://qa.door43.org/api/v1/" });
+    const notifClient = useNotifClient({ basePath: "https://qa.door43.org/api/v1/" });
     
-    console.log(repoClient);
+    console.log(notifClient);
     
-    const [repository, setRepository] = useState({});
+    const [notifications, setNotifications] = useState({});
     
     useEffect(async () => {
-      setRepository(await repoClient.repoGet('Es-419_gl', 'es-419_tn').then(({ data }) => data))
+      setNotifications(await notifClient.notifyGetRepoList('unfoldingWord', 'en_ta').then(({ data }) => data))
     },[])
     
     return (
       <ReactJson
         style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
-        src={repository}
+        src={notifications}
         theme="monokai"
       />
     );

@@ -1,4 +1,4 @@
-<!-- title: Organization, depth: 0 -->
+<!-- title: Organization -->
 
 ## About
 

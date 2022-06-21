@@ -1,6 +1,8 @@
-# useOrg
+### Example:
 
-@hook-description
+The following *JSON* is the result of the code found below.
+
+> **Tip:** Change the code to get different results.
 
 ```js
 import React, { useEffect, useState } from 'react';
@@ -14,7 +16,7 @@ function Component(){
     orgName
   });
 
-  const { organization, isLoading } = state;
+  const { org, isLoading } = state;
 
   const unsetOrgParams = () => {
     setOrgName(null);
@@ -28,7 +30,7 @@ function Component(){
     <>
       <ReactJson
         style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
-        src={organization}
+        src={org}
         theme="monokai"
       />
       <button onClick={setOrgParams}>Set Organization</button>

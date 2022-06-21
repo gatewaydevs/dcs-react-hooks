@@ -6,11 +6,11 @@ export function useRepo({ ownerName, repoName, repoClient, options, configuratio
   const _repoClient = useRepoClient({ repoClient, ...configuration, axios });
 
   const fetchRepo = () => {
-    const repository = _repoClient.repoGet(ownerName, repoName).then(({ data }) => data);
+    const repository = _repoClient.repoGet(ownerName, repoName, options?.request).then(({ data }) => data);
     return repository;
   }
 
-  const { data: repository, error, mutate: setRepository } = useSwr([ownerName,repoName], fetchRepo, options);
+  const { data: repository, error, mutate: setRepository } = useSwr([ownerName,repoName], fetchRepo, options?.swr);
 
   return {
     state: {

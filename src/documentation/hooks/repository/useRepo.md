@@ -1,6 +1,8 @@
-# useRepo
+### Example:
 
-@hook-description
+The following *JSON* is the result of the code found below.
+
+> **Tip:** Change the code to get different results.
 
 ```js
 import React, { useEffect, useState } from 'react';

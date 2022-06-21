@@ -1,19 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { OrganizationApi } from 'dcs-js';
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+
 /**
- * Get repository from DCS.
- * @param {Object} params - .
- * @param {string} params.ownerName - Owner name (user, organization).
- * @param {Object} params.orgClient - OrganizationApi intance.
- * @param {Object} params.axios - replace default axios instance.
- * @param {Object} params.configuration - OrganizationApi configuration parameters.
- * @param {string} params.configuration.token
- * @param {(string|Promise|Callback)} params.configuration.apiKey
- * @param {string} params.configuration.username
- * @param {string} params.configuration.password
- * @param {(string|Promise|Callback)} params.configuration.accessToken
- * @param {string} params.configuration.basePath
- * @param {Object} params.configuration.baseOptions
+ * Get organziation from DCS.
  */
 export function useOrg() {
   return <></>;
@@ -22,7 +13,13 @@ export function useOrg() {
 useOrg.propTypes = {
   orgName: PropTypes.string,
   /** see https://swr.vercel.app/docs/options#options */
-  options: PropTypes.object,
+  orgClient: PropTypes.instanceOf(OrganizationApi),
+  options: PropTypes.shape({
+    /** see https://swr.vercel.app/docs/options#options */
+    swr: PropTypes.object,
+    /** see https://axios-http.com/docs/req_config */
+    request: PropTypes.instanceOf(AxiosRequestConfig)
+  }),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({
     token: PropTypes.string,
@@ -32,5 +29,6 @@ useOrg.propTypes = {
     accessToken: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.instanceOf(Promise)]),
     basePath: PropTypes.string,
     baseOptions: PropTypes.object,
-  })
+  }),
+  axios: PropTypes.instanceOf(AxiosInstance)
 };

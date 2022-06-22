@@ -1,6 +1,8 @@
-# useRepo
+### Example:
 
-@hook-description
+The following *JSON* is the result of the code found below.
+
+> **Tip:** Change the code to get different results.
 
 ```js
 import React, { useEffect, useState } from 'react';
@@ -9,23 +11,23 @@ import ReactJson from 'react-json-view';
 
 function Component(){
   const [ownerName, setOwnerName] = useState();
-  const [repositoryName, setRepositoryName] = useState();
+  const [repoName, setRepoName] = useState();
 
   const { state, actions } = useRepo({
     ownerName,
-    repositoryName
+    repoName
   });
 
   const { repository, isLoading } = state;
 
   const unsetRepoParams = () => {
     setOwnerName(null);
-    setRepositoryName(null);
+    setRepoName(null);
   }
 
   const setRepoParams = () => {
     setOwnerName("unfoldingWord");
-    setRepositoryName("en_tn");
+    setRepoName("en_tn");
   }
 
   return isLoading ? "loading..." : (

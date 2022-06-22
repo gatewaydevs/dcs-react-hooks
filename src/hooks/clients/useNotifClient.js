@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types';
-import { AdminApi } from "dcs-js";
+import { NotificationApi } from "dcs-js";
 import { AxiosInstance } from "axios";
 import { getApiConfig } from "@helpers/api";
 
 /**
- * Uses AdminApi from dcs-js.
+ * Uses NotificationApi from dcs-js.
  */
-export const useAdminClient = ({ token, basePath, adminClient, axios, configuration } = {}) => {
-  if (adminClient instanceof AdminApi) return adminClient;
+export const useNotifClient = ({ token, basePath, notifClient, axios, configuration } = {}) => {
+  if (notifClient instanceof NotificationApi) return notifClient;
   const _configuration = getApiConfig({ token, ...configuration, basePath });
-  return new AdminApi(_configuration, _configuration.basePath, axios);
+  return new NotificationApi(_configuration, _configuration.basePath, axios);
 };
 
-useAdminClient.propTypes = {
+useNotifClient.propTypes = {
   token: PropTypes.string,
   basePath: PropTypes.string,
-  adminClient: PropTypes.instanceOf(AdminApi),
+  notifClient: PropTypes.instanceOf(NotificationApi),
   axios: PropTypes.instanceOf(AxiosInstance),
   /** *dcs-js* instance config */
   configuration: PropTypes.shape({

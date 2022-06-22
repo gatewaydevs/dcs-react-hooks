@@ -3,7 +3,7 @@ import useSWRImmutable from 'swr/immutable'
 import { useUserClient } from "@hooks/clients/useUserClient";
 
 export function useAuthentication({tokenName, username, password, userClient, options, configuration, axios}) {
-  const _userClient = useUserClient({ userClient, username, password, ...configuration, axios});
+  const _userClient = useUserClient({ userClient, configuration:{...configuration, username, password}, axios});
 
   //Fetch function to get token and delete old ones
   const fetchAuth = async (username) => {

@@ -10,7 +10,7 @@ export function useRepoBranches({ ownerName, repoName, page, limit, repoClient, 
     return repoBranches;
   }
 
-  const { data: repoBranches, error, mutate: setRepository } = useSwr([ownerName,repoName], fetchRepo, options?.swr);
+  const { data: repoBranches, error, mutate: setRepoBranches } = useSwr([ownerName,repoName], fetchRepo, options?.swr);
 
   return {
     state: {
@@ -19,7 +19,7 @@ export function useRepoBranches({ ownerName, repoName, page, limit, repoClient, 
       isLoading: !error && !repoBranches && !!ownerName && !!repoName,
     },
     actions: {
-      setRepository,
+      setRepoBranches,
     }
   }
 };

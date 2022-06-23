@@ -6,19 +6,21 @@ The following *JSON* is the result of the code found below.
 
 ```js
 import React, { useEffect, useState } from 'react';
-import { useRepo } from 'dcs-react-hooks';
+import { useRepoBranches } from 'dcs-react-hooks';
 import ReactJson from 'react-json-view';
 
 function Component(){
   const [ownerName, setOwnerName] = useState();
   const [repoName, setRepoName] = useState();
 
-  const { state, actions } = useRepo({
+  const { state, actions } = useRepoBranches({
     ownerName,
-    repoName
+    repoName,
+    page: 1,
+    limit: 5
   });
 
-  const { repo, isLoading } = state;
+  const { isLoading } = state;
 
   const unsetRepoParams = () => {
     setOwnerName(null);
@@ -34,7 +36,7 @@ function Component(){
     <>
       <ReactJson
         style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
-        src={repo}
+        src={state}
         theme="monokai"
       />
       <button onClick={setRepoParams}>Set repository</button>

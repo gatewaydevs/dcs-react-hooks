@@ -18,7 +18,7 @@ function Component(){
     repoName
   });
 
-  const { repository, isLoading } = state;
+  const { repo, isLoading } = state;
 
   const unsetRepoParams = () => {
     setOwnerName(null);
@@ -34,7 +34,7 @@ function Component(){
     <>
       <ReactJson
         style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
-        src={repository}
+        src={repo}
         theme="monokai"
       />
       <button onClick={setRepoParams}>Set repository</button>

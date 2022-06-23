@@ -1,9 +1,11 @@
 import useSwr from 'swr';
 import { useRepoClient } from '@hooks/clients/useRepoClient';
+import { useAuthentication } from '@hooks/user/useAuthentication';
 
 export function useRepoContents({ ownerName, repoName, filepath, ref, raw = true, repoClient, options, configuration, axios }) {
-  
-  const _repoClient = useRepoClient({ repoClient, ...configuration, axios });
+  const { state: { token } } = useAuthentication({});
+
+  const _repoClient = useRepoClient({ repoClient, token: token?.sha1, ...configuration, axios });
 
   const fetchRepo = () => {
     const repoContents = raw

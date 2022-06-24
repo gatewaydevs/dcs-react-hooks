@@ -4,7 +4,7 @@ import { RepositoryApi } from 'dcs-js';
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 
 /**
- * Get list of branches from repository.
+ * Get contents from repository.
  */
 
 export function useRepoContents() {
